@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>HOLA ESTE ES MI PRIMER PROYECTO</h1>
+    <h2> {{welcome}}</h2>
+    <ul>
+      <li *ngFor="let t of tasks" >
+          {{ t }}
+      </li>
+    </ul>
+    <hr/>
+    <h2>{{ 'hola'.repeat(4) }}</h2>
+    <p> la sima de 3 + 3 es {{ 3 +3 }} </p>
+
+    <p> hola soy {{ name()}} y mi edad es {{ age }} </p>
+
+    <img [src]=img alt="">
+    <input type="text" value="nicolas">
+    <button [disabled]=disabled>Click me2 </button>
+    <input type="text2" [value]=name()>
+    <button disabled="false">Click me </button>
+    <button disab>                      </button>
+
+    <p>person: {{ person.name }}</p>
+    <input type="text2" [value]=person.age>
+    <img [src]=person.avatar alt="">
+    <hr />  
+    <button (click)="clickhandler()"> click me </button>
+    <button (dblclick)="clickhandler2()">click me2 </button>
+    <p>(change) </p>
+    <input type="number" [value]=person.age (change)="changehandler($event)">
+    <p>(keydown) </p>
+    <input type="text" [value]=person.name (keydown)="keydownhandler($event)">
+    <p>(keydown atajos) </p>
+    <input type="text" [value]=person.name (keydown.shift.t)="clickhandler()">
+    <hr />  
+    <h1> signal </h1>
+    <input type="text" [value]="name()"  (keydown)="keydownhandler2($event)" >
+    <h1> {{ name() }} </h1>
+</div>
